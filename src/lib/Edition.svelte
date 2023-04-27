@@ -58,7 +58,7 @@
 </div>
 
 <form>
-    <fieldset class="customer-information">
+    <fieldset>
         <legend>Customer information</legend>
         <div class="input">
             <label for="reference">Reference Number</label>
@@ -88,6 +88,34 @@
         <div class="input wide">
             <label for="address">Address</label>
             <input id="address" type="text">
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Facade information</legend>
+        <div class="input">
+            <label for="overall-condition">Overall condition</label>
+            <select name="ovcond" id="overall-condition">
+                <option value="">--Please choose an option--</option>
+                <option value="dog">Very Bad</option>
+                <option value="cat">Bad</option>
+                <option value="hamster">Normal</option>
+                <option value="parrot">Good</option>
+                <option value="spider">Brand new</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="materials">Material</label>
+            <select name="mat" id="materials">
+                <option value="">--Please choose an option--</option>
+                <option value="dog">Stone</option>
+                <option value="cat">Plaster</option>
+                <option value="hamster">Brick</option>
+                <option value="hamster">Mixed</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="height">Height (meters)</label>
+            <input id="height" type="number" min="1" max="200" step="0.1" value="15">
         </div>
     </fieldset>
     <div class="cost-prediction">
@@ -180,7 +208,7 @@
         min-width: 4em;
         margin: 2em;
     }
-    .customer-information {
+    fieldset {
         display: grid;
         align-items: center;
         justify-content: center;
@@ -192,6 +220,7 @@
         background-color: #febb4f;
         border: 1px solid rgb(208, 208, 208);
     }
+
     legend {
         font-size: 1.3em;
         font-weight: 600;
@@ -240,7 +269,7 @@
     #address {
         width: 80%;
     }
-    input {
+    input, select {
         border-radius: 7px;
         height: 2em;
         width: 80%;
