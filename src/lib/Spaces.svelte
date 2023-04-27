@@ -4,7 +4,7 @@
     let spaces = {}
     export let selectedSpaceID = null
     const initSpace = (id) => {
-        const name = `New space ${id}`
+        const name = `New quote ${id}`
         return {
             name: name,
             picture: null,
